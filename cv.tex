@@ -1,0 +1,177 @@
+%%% LaTeX Template: Curriculum Vitae
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep the referal to HowToTeX.com.
+%%% Date: July 2011
+
+%%% ------------------------------------------------------------
+%%% BEGIN PREAMBLE
+%%% ------------------------------------------------------------
+\documentclass[paper=a4,fontsize=11pt]{scrartcl}	 			% KOMA-article class
+
+%\usepackage[english]{babel}								% English language/hyphenation
+%\usepackage[protrusion=true,expansion=true]{microtype}		% Better typography
+\usepackage{amsmath,amsfonts,amsthm}					% Math packages
+\usepackage[pdftex]{graphicx}								% Enable pdflatex
+\usepackage[svgnames]{xcolor}							% Colors by their 'svgnames'
+\usepackage{geometry}
+	\textheight=700px									% Saving trees ;-)
+\usepackage{url}										% Clickable URL's
+\usepackage{wrapfig}									% Wrap text along figures
+
+\frenchspacing									% Better looking spacings after periods
+\pagestyle{empty}								% No pagenumbers/headers/footers
+%\usepackage{bbding}									% Symbols
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}							% Custom sectioning (see below)
+
+\sectionfont{%									% Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%					% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}
+	}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}				% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}			% Vertical space macro
+
+\newcommand{\MyName}[1]{
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1 		% Name
+		\par \normalsize \normalfont}
+
+\newcommand{\MySlogan}[1]{
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1} % Slogan (optional)
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 		% Indentation
+		\parbox{\spacebox}{						% Box to align text
+		\textit{#1}}								% Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}					% Entry value
+
+\newcommand{\SkillsEntry}[2]{						% Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=0 		% Indentation
+		\parbox{\spacebox}{						% Box to align text
+		\textit{#1}}								% Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}					% Entry value
+
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill 					% Study
+		\colorbox{Black}{%
+			\parbox{6em}{%
+			\hfill\color{White}#2}} \par				% Duration
+		\noindent \textit{#3} \par					% School
+		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{						% Same as \EducationEntry
+		\noindent \textbf{#1} \hfill 					% Jobname
+		\colorbox{Black}{\color{White}#2} \par		% Duration
+		\noindent \textit{#3} \par					% Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
+		\normalsize \par}
+
+
+
+%%% ------------------------------------------------------------
+%%% BEGIN DOCUMENT
+%%% ------------------------------------------------------------
+\begin{document}
+
+
+\MyName{Pruthvi Mehta}
+\MySlogan{Curriculum Vitae}
+
+
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Personal details}{}
+
+\PersonalEntry{Birth}{September 25, 1995}
+\PersonalEntry{Address}{87 Chestnut Drive, Pinner, HA5 1LX}
+\PersonalEntry{Mail}{p{\_}h{\_}mehta@outlook.com}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+\EducationEntry{Queen Mary University of London}{2017-present}
+\newline
+
+MSc Particle Physics
+\paragraph{}
+The modules I am undertaking this year are Particle Physics, Particle Accelerator Physics, Relativistic Waves and Quantum Fields, Advanced Quantum Field Theory, Standard Model Physics and Beyond, Supersymmetry, Collider Physics and Dark Matter and Dark Energy.
+\newline
+My MSc Physics Research project involves taking precision measurements of the cross section of the Drell-Yan process.
+\paragraph{}
+\EducationEntry{Queen Mary University of London}{2014-2017}
+\newline
+
+BSc. (Hons.) Physics - First Class degree obtained
+\paragraph{}
+My final year Extended Independent Project involved me analysing simulation data from Hyper-Kamiokande using software packages WCSim and Geant4. I compared how the data involving the photomultiplier tubes changed depending on which of the three models for hadronic interactions (BINARY, BERTINI and GHEISHA) was used. I also used a program called Prob 3++ to investigate CP violation due to neutrino oscillations. This project has given me an understanding of how to program using UNIX and how to use the data analysis framework ROOT, and has reinforced my knowledge of C++.
+\paragraph{}
+The third year module Radiation Detectors involved learning about how the components used in particle physics detectors work, for example PMTs, scintillation counters and semiconductor detectors. I achieved 79\% in this module. The Elementary Particle Physics module in which I achieved 70\% involved learning about a broad range of particle physics topics in detail including the Higgs field, CP Violation, neutrino oscillation and electroweak symmetry breaking. The module Statistical Data Analysis involved learning about different distributions such as Binomial and Poisson, as well as topics such as probability, confidence intervals, limits, hypothesis testing and multivariate analysis. It reinforced my knowledge of R and how to use scripts for neural networks and support vector machines.
+\paragraph{}
+In the second year module Quantum Mechanics A I achieved 86\% overall which shows my understanding of the key principles of quantum mechanics applied to systems such as finite and infinite quantum wells, simple harmonic oscillators and potential barriers, quantum tunnelling and the solution to the hydrogen atom.
+\paragraph{}
+In the first year I also undertook an optional module called ``Introduction to C++ programming" in which I was taught how to write simple programs in C++, which included the use of loops, functions, classes, vectors, pointers and reference, and I achieved 72\% overall in this module.
+
+\paragraph{}
+\noindent
+\EducationEntry{Northwood College}{1998-2014}
+\paragraph{}
+\raggedright
+\underline{\textbf{Qualifications:}}
+\indent
+\subparagraph{A-Levels:}
+Mathematics-A, English Literature-A, Physics-B, Further Maths-B
+\subparagraph{GCSEs:}
+13 GCSEs, 10 A*s, 3As, including A* in Maths, Physics, Statistics, Chemistry and English Literature
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{Work experience}{}
+\paragraph{}
+I am a Physics Ambassador for the Physics and Astronomy department at QMUL. This involves working with the outreach team within the Physics department and helping out at outreach events. This role includes showing students who are applying to QMUL to study Physics around the department, and helping out in schools, for example, talking about what it is like to study physics at university and setting up demo-kits at physics workshops.
+\paragraph{}
+I was a student volunteer at BUSSTEPP 2017 (British Universities Summer School in Theoretical Elementary Particle Physics). (August 2017) I sat in on lectures about particle physics, quantum field theory and cosmology among other topics: even though this was a conference aimed at first-year PhD students, it gave me a taste of the type of subject knowledge necessary to undertake a research degree. Part of my duties as a volunteer involved helping set up the tutorial rooms for the PhD students, which helped develop my communication and teamwork skills.
+\paragraph{}
+Attended CAPS 2017 (Conference of Astronomy and Physics Students 2017) where I was asked to give a talk and present a poster on my BSc final year research project. This boosted my confidence with regards to presenting my research and allowed me to learn about the research fellow students did at other universities.
+\paragraph{}
+I also undertook a day's work experience at University College Hospital (July 2013). I learned about the realm of medical physics, in particular, radiotherapy. This gave me insight into how physics is used in the medical field to benefit the lives of others.
+\paragraph{}
+Invited to CERN for the ``Researchers' Night'' event (August 2012). The group I was in looked at ATLAS. We used a program called CAMILLA to try and spot a possible Higgs Boson being produced by studying the tracks left by previous collisions. This was important because it gave me a glimpse of the actual software used by scientists at CERN. Pictures of the event can be found here: http://cds.cern.ch/record/1482106
+\paragraph{}
+I underwent a week's work experience at King's College London (July 2012). At the end of the week I was to present a chosen physics topic to physics students and members of the physics department. My group's chosen topic was the Higgs boson, and I was in charge of explaining the Higgs mechanism and the ``Mexican Hat" shape of the Higgs field. This enhanced my communication and teamwork skills.
+
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Skills}{}
+
+\SkillsEntry{Languages}{Gujarati (mother tongue)}
+\SkillsEntry{}{English (fluent)}
+\SkillsEntry{Programming}{\textsc{C++}, \textsc{Python}, \textsc{R}, \textsc{Unix}}
+\SkillsEntry{Software}{Microsoft Office}
+\SkillsEntry{}{\textsc{Mathematica}, \textsc{WCSim}, \textsc{Geant4}, \textsc{ROOT}, \LaTeX}
+
+\paragraph{Special interests:}
+I am a Member of the Institute of Physics (MInstP) and regularly attend events held by them and am a volunteer for the London and South East branch of the IOP.
+\newline
+I love physics communication and outreach: I attended New Scientist Live 2017 as a volunteer for a company called Immersive Experiences who specialise in selling telescopes and mobile planetariums for events. My duties included running the shows inside the mobile planetarium for visitors and selling meteorite fragments to customers and explaining how they form and their composition.
+\newline
+I am also a member of Decolonise Physics, a student group working with the Diversity and Equality Committee within the School of Physics and Astronomy at QMUL. The aim of this group is to make physics more inclusive to BME students.
+
+
+
+
+
+%%% References
+%%% ------------------------------------------------------------
+\NewPart{References}{}
+Available upon request
+\end{document}
